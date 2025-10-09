@@ -9,13 +9,12 @@ import Image from "next/image";
 interface PropertyCardProps {
   property: Property;
   onFavoriteToggle?: (propertyId: number) => void;
-  onViewDetails?: (propertyId: number) => void;
+  //onViewDetails?: (propertyId: number) => void;
 }
 
 export const PropertyCard: React.FC<PropertyCardProps> = ({
   property,
   onFavoriteToggle,
-  onViewDetails,
 }) => {
   const [isFavorite, setIsFavorite] = useState(false);
 
@@ -23,10 +22,6 @@ export const PropertyCard: React.FC<PropertyCardProps> = ({
     e.preventDefault();
     setIsFavorite(!isFavorite);
     onFavoriteToggle?.(property.id);
-  };
-
-  const handleViewDetails = () => {
-    onViewDetails?.(property.id);
   };
 
   return (
@@ -39,6 +34,7 @@ export const PropertyCard: React.FC<PropertyCardProps> = ({
               alt={property.title}
               fill
               className="object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
           <span
@@ -59,6 +55,9 @@ export const PropertyCard: React.FC<PropertyCardProps> = ({
               className={`w-5 h-5 ${
                 isFavorite ? "fill-red-500 text-red-500" : ""
               }`}
+              aria-label={
+                isFavorite ? "Remove from favorites" : "Add to favorites"
+              }
             />
           </button>
         </div>

@@ -1,23 +1,22 @@
-'use client';
+"use client";
 
-import React, { useState, useMemo } from 'react';
-import { Header, Footer, PropertyCard } from '@/components';
+import React, { useState, useMemo } from "react";
+import { Header, Footer, PropertyCard } from "@/components";
 import {
   PropertyFilters,
   PropertyFilterState,
-} from '@/components/PropertyFilters';
-import { allProperties } from '@/lib/data/properties';
-import { Property } from '@/types';
+} from "@/components/PropertyFilters";
+import { allProperties } from "@/lib/data/properties";
 
 export default function PropertiesPage() {
   const [filters, setFilters] = useState<PropertyFilterState>({
-    search: '',
-    status: 'ALL',
-    minPrice: '',
-    maxPrice: '',
-    beds: '',
-    baths: '',
-    sortBy: 'newest',
+    search: "",
+    status: "ALL",
+    minPrice: "",
+    maxPrice: "",
+    beds: "",
+    baths: "",
+    sortBy: "newest",
   });
 
   // Filter and sort properties
@@ -25,7 +24,7 @@ export default function PropertiesPage() {
     let result = [...allProperties];
 
     // Filter by status
-    if (filters.status !== 'ALL') {
+    if (filters.status !== "ALL") {
       result = result.filter((p) => p.status === filters.status);
     }
 
@@ -52,32 +51,24 @@ export default function PropertiesPage() {
 
     // Sort
     switch (filters.sortBy) {
-      case 'price-asc':
+      case "price-asc":
         result.sort((a, b) => {
-          const priceA = parseFloat(
-            a.price.replace(/[$,/mo]/g, '')
-          );
-          const priceB = parseFloat(
-            b.price.replace(/[$,/mo]/g, '')
-          );
+          const priceA = parseFloat(a.price.replace(/[$,/mo]/g, ""));
+          const priceB = parseFloat(b.price.replace(/[$,/mo]/g, ""));
           return priceA - priceB;
         });
         break;
-      case 'price-desc':
+      case "price-desc":
         result.sort((a, b) => {
-          const priceA = parseFloat(
-            a.price.replace(/[$,/mo]/g, '')
-          );
-          const priceB = parseFloat(
-            b.price.replace(/[$,/mo]/g, '')
-          );
+          const priceA = parseFloat(a.price.replace(/[$,/mo]/g, ""));
+          const priceB = parseFloat(b.price.replace(/[$,/mo]/g, ""));
           return priceB - priceA;
         });
         break;
-      case 'beds':
+      case "beds":
         result.sort((a, b) => b.beds - a.beds);
         break;
-      case 'newest':
+      case "newest":
       default:
         // Keep original order
         break;
@@ -117,8 +108,8 @@ export default function PropertiesPage() {
             <p className="text-gray-600">
               <span className="font-semibold text-black">
                 {filteredProperties.length}
-              </span>{' '}
-              {filteredProperties.length === 1 ? 'property' : 'properties'}{' '}
+              </span>{" "}
+              {filteredProperties.length === 1 ? "property" : "properties"}{" "}
               found
             </p>
           </div>
@@ -130,12 +121,7 @@ export default function PropertiesPage() {
                 <PropertyCard
                   key={property.id}
                   property={property}
-                  onFavoriteToggle={(id) =>
-                    console.log('Toggle favorite:', id)
-                  }
-                  onViewDetails={(id) =>
-                    console.log('View details:', id)
-                  }
+                  onFavoriteToggle={(id) => console.log("Toggle favorite:", id)}
                 />
               ))}
             </div>
@@ -157,9 +143,7 @@ export default function PropertiesPage() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold mb-2">
-                  No properties found
-                </h3>
+                <h3 className="text-2xl font-bold mb-2">No properties found</h3>
                 <p className="text-gray-600 mb-6">
                   Try adjusting your filters or search criteria to find more
                   properties.
@@ -167,13 +151,13 @@ export default function PropertiesPage() {
                 <button
                   onClick={() =>
                     handleFilterChange({
-                      search: '',
-                      status: 'ALL',
-                      minPrice: '',
-                      maxPrice: '',
-                      beds: '',
-                      baths: '',
-                      sortBy: 'newest',
+                      search: "",
+                      status: "ALL",
+                      minPrice: "",
+                      maxPrice: "",
+                      beds: "",
+                      baths: "",
+                      sortBy: "newest",
                     })
                   }
                   className="bg-black text-white px-6 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors"

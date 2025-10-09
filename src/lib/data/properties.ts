@@ -135,12 +135,12 @@ export const allProperties: Property[] = [
   },
 ];
 
+const propertyMap = new Map(allProperties.map(p => [p.id, p]));
+
+export const getPropertyById = (id: number) => propertyMap.get(id);
+
 export const getFeaturedProperties = () => {
   return allProperties.slice(0, 3);
-};
-
-export const getPropertyById = (id: number) => {
-  return allProperties.find(property => property.id === id);
 };
 
 export const filterProperties = (filters: {
