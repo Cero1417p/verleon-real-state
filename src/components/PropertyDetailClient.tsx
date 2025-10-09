@@ -19,6 +19,7 @@ import {
 import { Property } from "@/types";
 import { PropertyCard } from "@/components";
 import Image from "next/image";
+import PropertyMap from "@/components/PropertyMap";
 
 interface PropertyDetailClientProps {
   property: Property;
@@ -240,9 +241,13 @@ export function PropertyDetailClient({
             {/* Map */}
             <div className="bg-white rounded-xl shadow-md p-8">
               <h2 className="text-2xl font-bold mb-4">Location</h2>
-              <div className="w-full h-96 bg-gray-200 rounded-lg flex items-center justify-center">
-                <MapPin className="w-16 h-16 text-gray-400" />
-                <span className="text-gray-500 ml-4">Map View</span>
+              <div className="w-full h-96">
+                {/* Coordenadas simuladas — en producción, deberían venir de la API */}
+                <PropertyMap
+                  position={[property.lat, property.lng]}
+                  title={property.title}
+                  location={property.location}
+                />
               </div>
             </div>
           </div>

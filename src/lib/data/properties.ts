@@ -11,6 +11,8 @@ export const allProperties: Property[] = [
     location: '123 Ocean Drive, Miami Beach',
     agent: 'John Smith',
     status: 'FOR SALE',
+    lat: 25.7725, // Aproximación para Ocean Drive, Miami Beach
+    lng: -80.1345,
   },
   {
     id: 2,
@@ -22,6 +24,8 @@ export const allProperties: Property[] = [
     location: '456 City Center, New York',
     agent: 'Sarah Johnson',
     status: 'FOR RENT',
+    lat: 40.7580, // Aproximación para Midtown Manhattan (cerca de City Center)
+    lng: -73.9855,
   },
   {
     id: 3,
@@ -33,6 +37,8 @@ export const allProperties: Property[] = [
     location: '789 Maple Street, Austin',
     agent: 'Michael Brown',
     status: 'FOR SALE',
+    lat: 30.2672, // Aproximación para Austin, TX
+    lng: -97.7431,
   },
   {
     id: 4,
@@ -44,6 +50,8 @@ export const allProperties: Property[] = [
     location: '321 Seaside Boulevard, Malibu',
     agent: 'Emily Davis',
     status: 'FOR SALE',
+    lat: 34.0387, // Aproximación para Malibu, CA (cerca de la costa)
+    lng: -118.7798,
   },
   {
     id: 5,
@@ -55,6 +63,8 @@ export const allProperties: Property[] = [
     location: '555 Downtown Ave, Seattle',
     agent: 'David Wilson',
     status: 'FOR RENT',
+    lat: 47.6062, // Aproximación para Downtown Seattle, WA
+    lng: -122.3321,
   },
   {
     id: 6,
@@ -66,6 +76,8 @@ export const allProperties: Property[] = [
     location: '888 Garden Lane, Portland',
     agent: 'Lisa Anderson',
     status: 'FOR SALE',
+    lat: 45.5051, // Aproximación para Portland, OR
+    lng: -122.6750,
   },
   {
     id: 7,
@@ -77,6 +89,8 @@ export const allProperties: Property[] = [
     location: '999 Sky Tower, Chicago',
     agent: 'Robert Taylor',
     status: 'FOR RENT',
+    lat: 41.8800, // Aproximación para el Loop, Chicago (cerca de edificios altos)
+    lng: -87.6298,
   },
   {
     id: 8,
@@ -88,6 +102,8 @@ export const allProperties: Property[] = [
     location: '444 Urban Street, Denver',
     agent: 'Jennifer Martinez',
     status: 'FOR SALE',
+    lat: 39.7392, // Aproximación para Denver, CO
+    lng: -104.9903,
   },
   {
     id: 9,
@@ -99,6 +115,8 @@ export const allProperties: Property[] = [
     location: '777 Estate Drive, Beverly Hills',
     agent: 'James Thompson',
     status: 'FOR SALE',
+    lat: 34.0736, // Aproximación para Beverly Hills, CA
+    lng: -118.4004,
   },
   {
     id: 10,
@@ -110,6 +128,8 @@ export const allProperties: Property[] = [
     location: '222 Marina Bay, San Diego',
     agent: 'Patricia Garcia',
     status: 'FOR RENT',
+    lat: 32.7157, // Aproximación para San Diego, CA (cerca de la bahía)
+    lng: -117.1611,
   },
   {
     id: 11,
@@ -121,6 +141,8 @@ export const allProperties: Property[] = [
     location: '333 Heritage Street, San Francisco',
     agent: 'Christopher Lee',
     status: 'FOR SALE',
+    lat: 37.7749, // Aproximación para San Francisco, CA
+    lng: -122.4194,
   },
   {
     id: 12,
@@ -132,6 +154,8 @@ export const allProperties: Property[] = [
     location: '666 Factory Row, Brooklyn',
     agent: 'Amanda White',
     status: 'FOR RENT',
+    lat: 40.6922, // Aproximación para Brooklyn, NY
+    lng: -73.9903,
   },
 ];
 

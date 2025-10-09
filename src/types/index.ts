@@ -10,6 +10,8 @@ export interface Property {
   location: string;
   agent: string;
   status: 'FOR SALE' | 'FOR RENT';
+  lat: number;
+  lng: number;
 }
 
 export interface Service {
