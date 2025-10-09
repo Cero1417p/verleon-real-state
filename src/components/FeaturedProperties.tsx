@@ -1,43 +1,49 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { PropertyCard } from './PropertyCard';
-import { Property } from '@/types';
+import React from "react";
+import { PropertyCard } from "./PropertyCard";
+import { Property } from "@/types";
 
 // Mock data - replace with your actual data fetching
 const defaultProperties: Property[] = [
   {
     id: 1,
-    image: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=640',
-    price: '$1,250,000',
+    image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=640",
+    price: "$1,250,000",
     beds: 4,
     baths: 3,
-    title: 'Modern Villa with Pool',
-    location: '123 Ocean Drive, Miami Beach',
-    agent: 'John Smith',
-    status: 'FOR SALE',
+    title: "Modern Villa with Pool",
+    location: "123 Ocean Drive, Miami Beach",
+    agent: "John Smith",
+    status: "FOR SALE",
+    lat: 25.7725, // Aproximación para Ocean Drive, Miami Beach
+    lng: -80.1345,
   },
   {
     id: 2,
-    image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=640',
-    price: '$3,200/mo',
+    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=640",
+    price: "$3,200/mo",
     beds: 2,
     baths: 2,
-    title: 'Luxury Downtown Apartment',
-    location: '456 City Center, New York',
-    agent: 'Sarah Johnson',
-    status: 'FOR RENT',
+    title: "Luxury Downtown Apartment",
+    location: "456 City Center, New York",
+    agent: "Sarah Johnson",
+    status: "FOR RENT",
+    lat: 40.758, // Aproximación para Midtown Manhattan (cerca de City Center)
+    lng: -73.9855,
   },
   {
     id: 3,
-    image: 'https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=640',
-    price: '$895,000',
+    image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=640",
+    price: "$895,000",
     beds: 3,
     baths: 2,
-    title: 'Charming Suburban Family Home',
-    location: '789 Maple Street, Austin',
-    agent: 'Michael Brown',
-    status: 'FOR SALE',
+    title: "Charming Suburban Family Home",
+    location: "789 Maple Street, Austin",
+    agent: "Michael Brown",
+    status: "FOR SALE",
+    lat: 30.2672, // Aproximación para Austin, TX
+    lng: -97.7431,
   },
 ];
 
@@ -51,7 +57,7 @@ export const FeaturedProperties: React.FC<FeaturedPropertiesProps> = ({
   onViewAll,
 }) => {
   const handleViewAll = () => {
-    console.log('View all properties clicked');
+    console.log("View all properties clicked");
     onViewAll?.();
   };
 
