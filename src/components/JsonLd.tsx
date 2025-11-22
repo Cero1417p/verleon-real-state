@@ -4,6 +4,7 @@ import { siteConfig } from '@/config/site.config';
 
 interface JsonLdProps {
   type: 'Organization' | 'RealEstateAgent' | 'LocalBusiness' | 'Product' | 'BreadcrumbList';
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   data?: any;
 }
 

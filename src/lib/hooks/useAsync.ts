@@ -13,6 +13,7 @@ type AsyncFunction<T> = () => Promise<T>;
 export function useAsync<T>(
   asyncFunction: AsyncFunction<T>,
   immediate = true,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   dependencies: any[] = []
 ) {
   const [state, setState] = useState<AsyncState<T>>({
