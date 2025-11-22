@@ -1,44 +1,47 @@
 "use client";
 
 import React, { useState } from "react";
-import { Menu } from "lucide-react";
+import { Menu, Phone } from "lucide-react";
 import Link from "next/link";
-import { usePathname } from "next/navigation"; // 👈 Importante
-import { NavLink } from "@/types";
+import { usePathname } from "next/navigation";
+import { siteConfig } from "@/config/site.config";
 
-const navLinks: NavLink[] = [
-  { label: "Home", href: "/" },
-  { label: "Properties", href: "/properties" },
-  { label: "Agents", href: "#" },
-  { label: "Services", href: "#" },
-  { label: "Contact", href: "#" },
+const navLinks = [
+  { label: "Inicio", href: "/" },
+  { label: "Proyectos", href: "/proyectos" },
+  { label: "Servicios", href: "/servicios" },
+  { label: "Nosotros", href: "/nosotros" },
+  { label: "Contacto", href: "/contacto" },
 ];
 
 export const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const pathname = usePathname(); // 👈 Obtiene la ruta actual
+  const pathname = usePathname();
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-sm">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <div className="flex items-center">
-          <Link href="/" className="text-2xl font-bold">
-            CasaZ
+          <Link href="/" className="text-2xl font-bold text-green-700">
+            {siteConfig.company.shortName}
           </Link>
+          <span className="ml-2 text-sm text-gray-600 hidden sm:block">
+            {siteConfig.company.slogan}
+          </span>
         </div>
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex space-x-8">
           {navLinks.map((link) => {
-            const isActive = pathname === link.href; // 👈 Compara ruta actual
+            const isActive = pathname === link.href;
             return (
               <Link
                 key={link.label}
                 href={link.href}
                 className={`font-medium transition-colors ${
                   isActive
-                    ? "text-black border-b-2 border-black" // activo
-                    : "text-gray-600 hover:text-gray-800" // inactivo
+                    ? "text-green-700 border-b-2 border-green-700"
+                    : "text-gray-600 hover:text-green-700"
                 }`}
               >
                 {link.label}
@@ -48,9 +51,13 @@ export const Header: React.FC = () => {
         </nav>
 
         <div className="flex items-center space-x-4">
-          <button className="hidden md:block bg-black text-white px-6 py-2 rounded-full font-medium hover:bg-gray-800 transition-colors">
-            Sign In
-          </button>
+          <a
+            href={`tel:${siteConfig.contact.phone}`}
+            className="hidden md:flex items-center gap-2 bg-green-700 text-white px-4 py-2 rounded-full font-medium hover:bg-green-800 transition-colors"
+          >
+            <Phone className="w-4 h-4" />
+            {siteConfig.contact.phone}
+          </a>
           <button
             className="md:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -73,8 +80,8 @@ export const Header: React.FC = () => {
                   href={link.href}
                   className={`font-medium transition-colors ${
                     isActive
-                      ? "text-black border-b border-black"
-                      : "text-gray-600 hover:text-gray-800"
+                      ? "text-green-700 border-b border-green-700"
+                      : "text-gray-600 hover:text-green-700"
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -82,9 +89,13 @@ export const Header: React.FC = () => {
                 </Link>
               );
             })}
-            <button className="bg-black text-white px-6 py-2 rounded-full font-medium hover:bg-gray-800 transition-colors w-full">
-              Sign In
-            </button>
+            <a
+              href={`tel:${siteConfig.contact.phone}`}
+              className="bg-green-700 flex items-center justify-center text-white px-6 py-2 rounded-full font-medium hover:bg-green-800 transition-colors w-full text-center"
+            >
+              <Phone className="w-4 h-4" />
+              {siteConfig.contact.phone}
+            </a>
           </nav>
         </div>
       )}

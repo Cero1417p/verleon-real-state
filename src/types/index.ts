@@ -44,3 +44,18 @@ export interface ContactInfo {
   phone: string;
   email: string;
 }
+
+
+export interface Project {
+  slug: string;               // usado en la URL (ej: "san-isidro")
+  name: string;               // Nombre visible
+  city: string;               // Ciudad (ej: "Cajamarca")
+  district?: string;          // Distrito o zona (opcional)
+  description: string;        // Breve descripción
+  status: 'preventas' | 'construccion' | 'entregado';
+  totalArea: string;          // Superficie total del proyecto (ej: "12.5 ha")
+  startingPrice: string;      // Precio desde (ej: "S/ 85,000")
+  services: string[];         // Servicios incluidos
+  images: string[];           // URLs de imágenes (primera es la principal)
+  mapPosition?: [number, number]; // [lat, lng] para mapa (opcional)
+}

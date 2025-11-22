@@ -8,3 +8,11 @@ export { ServicesSection } from './ServicesSection';
 export { TestimonialsSection } from './TestimonialsSection';
 export { CTASection } from './CTASection';
 export { Footer } from './Footer';
+
+// UI Components
+export { OptimizedImage } from './OptimizedImage';
+export { LoadingSpinner } from './LoadingSpinner';
+export { ErrorMessage } from './ErrorMessage';
+export { ErrorBoundary } from './ErrorBoundary';
+export { Banner } from './Banner';
+export { JsonLd } from './JsonLd';
