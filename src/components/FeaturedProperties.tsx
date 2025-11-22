@@ -83,7 +83,7 @@ export const FeaturedProperties: React.FC<FeaturedPropertiesProps> = ({
         <div className="text-center mt-12">
           <button
             onClick={handleViewAll}
-            className="border-2 border-black px-8 py-3 rounded-full font-medium hover:bg-black hover:text-white transition-colors"
+            className="border-2 border-primary text-primary px-8 py-3 rounded-full font-medium hover:bg-primary hover:text-white transition-colors"
           >
             View All Properties
           </button>

@@ -24,7 +24,7 @@ export default function ServiciosPage() {
           <p className="text-gray-600 mb-6">
             Contáctanos hoy mismo y descubre cómo podemos ayudarte.
           </p>
-          <button className="bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800 transition">
+          <button className="bg-primary text-white px-6 py-3 rounded-full hover:bg-primary-dark transition">
             Contactar ahora
           </button>
         </div>

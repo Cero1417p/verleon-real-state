@@ -39,7 +39,7 @@ export const PropertyCard: React.FC<PropertyCardProps> = ({
           </div>
           <span
             className={`absolute top-4 left-4 ${
-              property.status === "FOR SALE" ? "bg-black" : "bg-blue-500"
+              property.status === "FOR SALE" ? "bg-primary" : "bg-accent"
             } text-white px-3 py-1 rounded-full text-sm font-medium`}
           >
             {property.status}

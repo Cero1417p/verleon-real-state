@@ -1,18 +1,85 @@
 @import "tailwindcss";
 @import 'leaflet/dist/leaflet.css';
 
+/* ============================================
+   DESIGN SYSTEM - CENTRALIZED COLOR PALETTE
+   ============================================
+   
+   Modify these variables to change the entire site's color scheme.
+   All components reference these colors for consistency.
+   
+   Color Palette: Professional Blue/Cyan for Real Estate
+   - Primary: Sky Blue (#0ea5e9) - Trust, professionalism, modernity
+   - Secondary: Slate Dark (#1e293b) - Sophistication, contrast
+   - Accent: Cyan (#06b6d4) - Energy, highlights
+*/
+
 :root {
+  /* Base Colors */
   --background: #ffffff;
   --foreground: #171717;
+  
+  /* Brand Colors - MODIFY THESE TO CHANGE ENTIRE SITE THEME */
+  --color-primary: #0ea5e9;        /* Sky Blue 500 - Main brand color */
+  --color-primary-dark: #0284c7;   /* Sky Blue 600 - Hover states */
+  --color-primary-light: #7dd3fc;  /* Sky Blue 300 - Subtle backgrounds */
+  --color-primary-lighter: #e0f2fe; /* Sky Blue 50 - Very light backgrounds */
+  
+  --color-secondary: #1e293b;      /* Slate 800 - Dark sections */
+  --color-secondary-light: #334155; /* Slate 700 - Lighter dark sections */
+  
+  --color-accent: #06b6d4;         /* Cyan 500 - Special highlights */
+  --color-accent-dark: #0891b2;    /* Cyan 600 - Accent hover */
+  
+  /* Semantic Colors */
+  --color-success: #10b981;        /* Emerald 500 */
+  --color-warning: #f59e0b;        /* Amber 500 */
+  --color-error: #ef4444;          /* Red 500 */
+  --color-info: #3b82f6;           /* Blue 500 */
+  
+  /* Neutral Colors */
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1f2937;
+  --color-gray-900: #111827;
 }
 
+/* Tailwind v4 Theme Configuration */
 @theme inline {
+  /* Base */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  
+  /* Brand Colors */
+  --color-primary: var(--color-primary);
+  --color-primary-dark: var(--color-primary-dark);
+  --color-primary-light: var(--color-primary-light);
+  --color-primary-lighter: var(--color-primary-lighter);
+  
+  --color-secondary: var(--color-secondary);
+  --color-secondary-light: var(--color-secondary-light);
+  
+  --color-accent: var(--color-accent);
+  --color-accent-dark: var(--color-accent-dark);
+  
+  /* Semantic */
+  --color-success: var(--color-success);
+  --color-warning: var(--color-warning);
+  --color-error: var(--color-error);
+  --color-info: var(--color-info);
+  
+  /* Fonts */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
+/* Dark Mode Support */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -20,8 +87,24 @@
   }
 }
 
+/* Base Styles */
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth Transitions */
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Focus Styles for Accessibility */
+*:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
 }

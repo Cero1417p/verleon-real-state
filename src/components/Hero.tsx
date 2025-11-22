@@ -45,7 +45,7 @@ export const Hero: React.FC = () => {
           </div>
           <button
             type="submit"
-            className="bg-green-700 text-white px-8 py-3 rounded-md font-medium hover:bg-green-800 transition-colors flex items-center gap-2"
+            className="bg-primary text-white px-8 py-3 rounded-md font-medium hover:bg-primary-dark transition-colors flex items-center gap-2"
           >
             <Search className="w-5 h-5" />
             Buscar Terrenos

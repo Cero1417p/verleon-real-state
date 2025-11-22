@@ -76,7 +76,7 @@ export default function NosotrosPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {valores.map((valor, index) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-green-100 text-green-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-primary-lighter text-primary rounded-full flex items-center justify-center mx-auto mb-4">
                   {valor.icon}
                 </div>
                 <h3 className="text-xl font-bold mb-2">{valor.title}</h3>
@@ -87,24 +87,24 @@ export default function NosotrosPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-green-50">
+      <section className="py-16 bg-primary-lighter">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-8">
             ¿Por Qué Elegirnos?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-xl shadow-sm">
-              <div className="text-4xl font-bold text-green-700 mb-2">+500</div>
+              <div className="text-4xl font-bold text-primary mb-2">+500</div>
               <div className="text-lg font-semibold mb-2">Terrenos Vendidos</div>
               <p className="text-gray-600">Hemos ayudado a cientos de clientes a encontrar su terreno ideal</p>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-sm">
-              <div className="text-4xl font-bold text-green-700 mb-2">100%</div>
+              <div className="text-4xl font-bold text-primary mb-2">100%</div>
               <div className="text-lg font-semibold mb-2">Clientes Satisfechos</div>
               <p className="text-gray-600">Nuestro compromiso es garantizar tu satisfacción en cada transacción</p>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-sm">
-              <div className="text-4xl font-bold text-green-700 mb-2">+10</div>
+              <div className="text-4xl font-bold text-primary mb-2">+10</div>
               <div className="text-lg font-semibold mb-2">Años de Experiencia</div>
               <p className="text-gray-600">Amplia trayectoria en el mercado inmobiliario</p>
             </div>

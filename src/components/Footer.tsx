@@ -32,7 +32,7 @@ export const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-gray-900 text-white pt-16 pb-8">
+    <footer className="bg-secondary text-white pt-16 pb-8">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
@@ -44,7 +44,7 @@ export const Footer: React.FC = () => {
                 <a
                   key={social.name}
                   href={social.href}
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-primary-light transition-colors"
                   aria-label={social.name}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -63,7 +63,7 @@ export const Footer: React.FC = () => {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-gray-400 hover:text-primary-light transition-colors"
                   >
                     {link.label}
                   </a>
@@ -96,7 +96,7 @@ export const Footer: React.FC = () => {
                 <Phone className="w-5 h-5 mr-3 flex-shrink-0" />
                 <a
                   href={`tel:${siteConfig.contact.phone}`}
-                  className="hover:text-white transition-colors"
+                  className="hover:text-primary-light transition-colors"
                 >
                   {siteConfig.contact.phone}
                 </a>
@@ -105,7 +105,7 @@ export const Footer: React.FC = () => {
                 <Mail className="w-5 h-5 mr-3 flex-shrink-0" />
                 <a
                   href={`mailto:${siteConfig.contact.email}`}
-                  className="hover:text-white transition-colors"
+                  className="hover:text-primary-light transition-colors"
                 >
                   {siteConfig.contact.email}
                 </a>

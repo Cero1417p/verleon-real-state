@@ -37,7 +37,7 @@ export default function ProyectosPage() {
                     />
                   </div>
                   <div className="p-6">
-                    <span className="inline-block px-3 py-1 text-xs font-semibold text-white bg-green-700 rounded-full mb-2">
+                    <span className="inline-block px-3 py-1 text-xs font-semibold text-white bg-primary rounded-full mb-2">
                       {statusLabels[project.status]}
                     </span>
                     <h3 className="text-xl font-bold mb-2">{project.name}</h3>
@@ -46,7 +46,7 @@ export default function ProyectosPage() {
                       {project.city}
                     </p>
                     <p className="text-gray-700 mb-3">{project.description}</p>
-                    <p className="font-bold text-green-700">Desde {project.startingPrice}</p>
+                    <p className="font-bold text-primary">Desde {project.startingPrice}</p>
                   </div>
                 </div>
               </Link>

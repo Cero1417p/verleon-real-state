@@ -22,31 +22,31 @@ export const CTASection: React.FC<CTASectionProps> = ({
   };
 
   return (
-    <section className="py-16 bg-black text-white">
+    <section className="py-16 bg-secondary text-white">
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-6">
-          Ready to Find Your Perfect Home?
+          ¿Listo para Encontrar tu Terreno Perfecto?
         </h2>
         <p className="text-gray-300 max-w-2xl mx-auto mb-10">
-          Join thousands of satisfied clients who found their dream properties
-          with CasaZ
+          Únete a miles de clientes satisfechos que encontraron sus propiedades ideales con Verleon
         </p>
         
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <button
             onClick={handleBrowseProperties}
-            className="bg-white text-black px-8 py-3 rounded-full font-medium hover:bg-gray-200 transition-colors"
+            className="bg-primary text-white px-8 py-3 rounded-full font-medium hover:bg-primary-dark transition-colors"
           >
-            Browse Properties
+            Ver Propiedades
           </button>
           <button
             onClick={handleContactAgent}
-            className="border-2 border-white px-8 py-3 rounded-full font-medium hover:bg-white hover:text-black transition-colors"
+            className="border-2 border-primary-light text-primary-light px-8 py-3 rounded-full font-medium hover:bg-primary-light hover:text-secondary transition-colors"
           >
-            Contact an Agent
+            Contactar un Agente
           </button>
         </div>
       </div>
     </section>
   );
 };
+
