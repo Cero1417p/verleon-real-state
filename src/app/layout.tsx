@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/config/site.config";
 import { JsonLd } from "@/components/JsonLd";
+import { Footer, Header } from "@/components";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -106,8 +107,10 @@ export default function RootLayout({
         itemScope
         itemType="https://schema.org/WebPage"
       >
+        <Header/>
         <JsonLd type="Organization" />
         {children}
+        <Footer />
       </body>
     </html>
   );

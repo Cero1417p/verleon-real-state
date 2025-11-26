@@ -1,7 +1,7 @@
 {
   "name": "Verleon Bienes Raíces",
   "short_name": "Verleon",
-  "description": "Empresa líder en bienes raíces en Bolivia, ofreciendo propiedades exclusivas y servicios inmobiliarios de alta calidad.",
+  "description": "Empresa líder en bienes raíces en Perú, ofreciendo propiedades exclusivas y servicios inmobiliarios de alta calidad.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
@@ -21,7 +21,7 @@
     }
   ],
   "orientation": "portrait",
-  "lang": "es-BO",
+  "lang": "es-PE",
   "dir": "ltr",
   "categories": ["business", "real estate", "properties"],
   "screenshots": [

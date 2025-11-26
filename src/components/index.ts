@@ -2,6 +2,8 @@
 export { Header } from './Header';
 export { Hero } from './Hero';
 export { PropertyCard } from './PropertyCard';
+export { ProjectCard } from './ProjectCard';
+export { ProjectGallery } from './ProjectGallery';
 export { FeaturedProperties } from './FeaturedProperties';
 export { ServiceCard } from './ServiceCard';
 export { ServicesSection } from './ServicesSection';

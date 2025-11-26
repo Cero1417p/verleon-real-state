@@ -4,16 +4,16 @@ export const siteConfig = {
     name: "Verleon Constructora Inmobiliaria",
     description: "Especialistas en venta de terrenos, lotes y proyectos de urbanización. Construimos el futuro de tus inversiones.",
     shortName: "Verleon",
-    established: "2025",
+    established: "2024",
     slogan: "Construyendo tu futuro, lote a lote"
   },
 
   // Contacto
   contact: {
-    phone: "+XX XXX XXXX",
+    phone: "+950049344",
     email: "info@verleon.com",
     address: "Dirección de tu oficina principal",
-    whatsapp: "+XX XXX XXXX",
+    whatsapp: "+51950049344",
     schedule: "Lunes a Viernes: 9:00 - 18:00"
   },
 

@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { Header, Footer } from "@/components";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { siteConfig } from "@/config/site.config";
 import { Banner } from "@/components/Banner";
@@ -9,7 +8,6 @@ import { Banner } from "@/components/Banner";
 export default function ContactoPage() {
   return (
     <div className="bg-gray-50 min-h-screen">
-      <Header />
 
       <Banner
         title="Contacto"
@@ -150,7 +148,6 @@ export default function ContactoPage() {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 }

@@ -1,13 +1,12 @@
 "use client";
 
 import React from "react";
-import { Header, Footer, ServicesSection } from "@/components";
+import { ServicesSection } from "@/components";
 import { Banner } from "@/components/Banner";
 
 export default function ServiciosPage() {
   return (
     <div className="bg-gray-50 min-h-screen">
-      <Header />
       
 
       <Banner
@@ -30,7 +29,6 @@ export default function ServiciosPage() {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 }

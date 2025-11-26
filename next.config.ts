@@ -7,7 +7,8 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "images.unsplash.com",
       },
-    ], // 👈 agrega tu dominio aquí
+    ],
+    domains: ["res.cloudinary.com"],
   },
 };
 

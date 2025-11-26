@@ -1,12 +1,10 @@
 "use client";
 
 import React from "react";
-import { Header, Footer } from "@/components";
 
 export default function AgentesPage() {
   return (
     <div className="bg-gray-50 min-h-screen">
-      <Header />
       <section className="py-16 bg-black text-white">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Nuestros Agentes</h1>
@@ -34,7 +32,6 @@ export default function AgentesPage() {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 }

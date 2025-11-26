@@ -1,12 +1,12 @@
 "use client";
 
 import React from "react";
-import { Header, Footer } from "@/components";
 import { siteConfig } from "@/config/site.config";
 import { Award, Users, MapPin, Shield } from "lucide-react";
 import { Banner } from "@/components/Banner";
 
 export default function NosotrosPage() {
+
   const valores = [
     {
       icon: <Shield className="w-8 h-8" />,
@@ -32,7 +32,6 @@ export default function NosotrosPage() {
 
   return (
     <div className="bg-gray-50 min-h-screen">
-      <Header />
 
       <Banner
         title="Sobre Nosotros"
@@ -112,7 +111,6 @@ export default function NosotrosPage() {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 }
