@@ -4,22 +4,16 @@ import React from "react";
 import { ProjectCard } from "./ProjectCard";
 import { Project } from "@/types";
 import { getAllProjects } from "@/config/projects.config";
+import Link from "next/link";
 
 interface FeaturedPropertiesProps {
   projects?: Project[];
-  onViewAll?: () => void;
 }
 
 export const FeaturedProperties: React.FC<FeaturedPropertiesProps> = ({
   projects,
-  onViewAll,
 }) => {
   const displayProjects = projects || getAllProjects();
-
-  const handleViewAll = () => {
-    console.log("View all properties clicked");
-    onViewAll?.();
-  };
 
   return (
     <section className="py-16 bg-gray-50">
@@ -40,12 +34,13 @@ export const FeaturedProperties: React.FC<FeaturedPropertiesProps> = ({
         </div>
 
         <div className="text-center mt-12">
-          <button
-            onClick={handleViewAll}
-            className="border-2 border-primary text-primary px-8 py-3 rounded-full font-medium hover:bg-primary hover:text-white transition-colors"
-          >
-            Ver Todos Los Proyectos
-          </button>
+          <Link
+        href="/proyectos"
+        className="border-2 border-primary text-primary px-8 py-3 rounded-full font-medium hover:bg-primary hover:text-white transition-colors inline-block"
+      >
+        Ver Todos Los Proyectos
+      </Link>
+
         </div>
       </div>
     </section>
