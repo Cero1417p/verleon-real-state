@@ -68,7 +68,7 @@ export const siteConfig = {
       name: "Carlos Rodríguez",
       role: "Empresario",
       text: "Excelente servicio y asesoría. Me ayudaron a elegir el mejor lote para mi proyecto de inversión.",
-      rating: 5
+      rating: 4.5
     }
   ],
 

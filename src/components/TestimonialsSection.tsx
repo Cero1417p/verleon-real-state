@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Star } from 'lucide-react';
+import { Star, StarHalf } from 'lucide-react';
 import { siteConfig } from '@/config/site.config';
 import { Testimonial } from '@/types';
 
@@ -12,6 +12,36 @@ interface TestimonialsSectionProps {
 export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
   testimonials = siteConfig.testimonials as Testimonial[],
 }) => {
+  const renderStars = (rating: number) => {
+    return [...Array(5)].map((_, i) => {
+      const fullStar = i + 1 <= rating;
+      const halfStar = i < rating && i + 1 > rating;
+
+      if (fullStar) {
+        return (
+          <Star
+            key={i}
+            className="w-5 h-5 fill-yellow-400 text-yellow-400"
+          />
+        );
+      } else if (halfStar) {
+        return (
+          <div key={i} className="relative w-5 h-5">
+            <StarHalf className="absolute top-0 left-0 w-5 h-5 fill-yellow-400 text-yellow-400" />
+            <Star className="absolute top-0 left-0 w-5 h-5 text-yellow-400" />
+          </div>
+        );
+      } else {
+        return (
+          <Star
+            key={i}
+            className="w-5 h-5 text-gray-300"
+          />
+        );
+      }
+    });
+  };
+
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
@@ -50,12 +80,7 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
               </p>
               
               <div className="flex gap-1">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="w-5 h-5 fill-yellow-400 text-yellow-400"
-                  />
-                ))}
+                {renderStars(testimonial.rating)}
               </div>
             </div>
           ))}
