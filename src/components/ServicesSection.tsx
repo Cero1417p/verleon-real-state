@@ -1,43 +1,30 @@
 'use client';
 
 import React from 'react';
-import { Home, Key, DollarSign, Briefcase } from 'lucide-react';
+import { siteConfig } from '@/config/site.config';
+import * as LucideIcons from 'lucide-react';
 import { ServiceCard } from './ServiceCard';
 import { Service } from '@/types';
 
-const defaultServices: Service[] = [
-  {
-    icon: <Home className="w-8 h-8" />,
-    title: 'Property Sales',
-    description:
-      'Expert guidance through the entire selling process from valuation to closing.',
-  },
-  {
-    icon: <Key className="w-8 h-8" />,
-    title: 'Property Rentals',
-    description:
-      'Find your perfect rental property with our extensive database and personalized service.',
-  },
-  {
-    icon: <DollarSign className="w-8 h-8" />,
-    title: 'Property Valuation',
-    description:
-      'Accurate market valuations to help you price your property competitively.',
-  },
-  {
-    icon: <Briefcase className="w-8 h-8" />,
-    title: 'Investment Advisory',
-    description:
-      'Strategic investment advice to maximize returns on your real estate portfolio.',
-  },
-];
+const servicesList: Service[] = siteConfig.services.map((service) => {
+  // Dynamically access the icon component based on the string name in config
+  // default to Home if not found
+  const icons = LucideIcons as unknown as Record<string, React.ElementType>;
+  const IconComponent = icons[service.icon] || LucideIcons.Home;
+  
+  return {
+    title: service.title,
+    description: service.description,
+    icon: <IconComponent className="w-8 h-8" />,
+  };
+});
 
 interface ServicesSectionProps {
   services?: Service[];
 }
 
 export const ServicesSection: React.FC<ServicesSectionProps> = ({
-  services = defaultServices,
+  services = servicesList,
 }) => {
   return (
     <section className="py-16 bg-gray-100">
