@@ -1,4 +1,11 @@
 export const siteConfig = {
+
+  // Hero image
+  heroImage: {
+    src: "https://res.cloudinary.com/dxntqapz6/image/upload/v1764439052/paisaje1_cxvjjx.webp",
+    alt: "Terrenos en venta"
+  },  
+
   // Información general de la empresa
   company: {
     name: "Verleon Constructora Inmobiliaria",

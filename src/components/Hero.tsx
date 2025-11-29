@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { Search, MapPin } from 'lucide-react';
 import { siteConfig } from '@/config/site.config';
+import Image from 'next/image';
 
 export const Hero: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -14,21 +15,32 @@ export const Hero: React.FC = () => {
   };
 
   return (
-    <section
-      className="h-screen flex items-center bg-cover bg-center relative"
-      style={{
-        backgroundImage:
-          "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/hero-image.png')",
-      }}
-    >
-      <div className="container mx-auto px-4 text-center text-white">
+    <section className="relative h-screen w-full flex items-center">
+      
+      {/* Imagen LCP optimizada */}
+      <Image
+        src={siteConfig.heroImage.src}
+        alt={siteConfig.heroImage.alt}
+        fill
+        priority
+        fetchPriority="high"
+        className="object-cover"
+      />
+
+      {/* Capa oscura */}
+      <div className="absolute inset-0 bg-black/50" />
+
+      {/* Contenido */}
+      <div className="relative z-10 container mx-auto px-4 text-center text-white">
+        
         <h1 className="text-4xl md:text-6xl font-bold mb-6">
           Encuentra el Terreno Ideal
         </h1>
+
         <p className="text-xl md:text-2xl mb-10 max-w-2xl mx-auto">
           {siteConfig.company.description}
         </p>
-        
+
         <form 
           onSubmit={handleSearch}
           className="max-w-2xl mx-auto bg-white rounded-lg p-2 flex flex-col sm:flex-row gap-2"
@@ -43,6 +55,7 @@ export const Hero: React.FC = () => {
               onChange={(e) => setSearchQuery(e.target.value)}
             />
           </div>
+
           <button
             type="submit"
             className="bg-primary text-white px-8 py-3 rounded-md font-medium hover:bg-primary-dark transition-colors flex items-center gap-2"
@@ -67,6 +80,7 @@ export const Hero: React.FC = () => {
           </div>
         </div>
       </div>
+
     </section>
   );
 };
