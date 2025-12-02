@@ -24,14 +24,14 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://verleon.com'), // Reemplazar con la URL real cuando esté en producción
+  metadataBase: new URL('https://verleon.vercel.app'), // Reemplazar con la URL real cuando esté en producción
   title: {
     default: siteConfig.seo.defaultTitle,
     template: `%s | ${siteConfig.company.name}`
   },
   description: siteConfig.seo.defaultDescription,
   keywords: siteConfig.seo.keywords,
-  authors: [{ name: siteConfig.company.name, url: 'https://verleon.com' }],
+  authors: [{ name: siteConfig.company.name, url: 'https://verleon.vercel.app' }],
   creator: siteConfig.company.name,
   publisher: siteConfig.company.name,
   formatDetection: {
@@ -42,16 +42,16 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/',
     languages: {
-      'es-BO': '/es-bo',
+      'es-PE': '/es-pe',
     },
   },
   openGraph: {
     title: siteConfig.seo.defaultTitle,
     description: siteConfig.seo.defaultDescription,
     type: "website",
-    locale: "es_BO",
+    locale: "es_PE",
     siteName: siteConfig.company.name,
-    url: 'https://verleon.com',
+    url: 'https://verleon.vercel.app',
     images: [
       {
         url: '/og-image.jpg', // Asegúrate de crear esta imagen

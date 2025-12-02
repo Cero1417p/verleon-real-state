@@ -7,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/admin/', '/api/'],
     },
-    sitemap: 'https://verleon.com/sitemap.xml',
-    host: 'https://verleon.com',
+    sitemap: 'https://verleon.vercel.app/sitemap.xml',
+    host: 'https://verleon.vercel.app',
   };
 }

@@ -1,7 +1,7 @@
 import { getAllProjects } from '@/config/projects.config';
 
 export default async function sitemap() {
-  const baseUrl = 'https://verleon.com';
+  const baseUrl = 'https://verleon.vercel.app';
   
   // Rutas estáticas principales
   const staticRoutes = [
